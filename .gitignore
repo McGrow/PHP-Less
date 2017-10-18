@@ -1,0 +1,9 @@
+# Created by .ignore support plugin (hsz.mobi)
+
+elem
+vagrant
+
+.idea
+*.zip
+*.rar
+
