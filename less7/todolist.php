@@ -20,8 +20,8 @@ $todo=$_POST['todo'];
 $todoList=getTodoLists ($_POST['nlist']); $sizeTodoList=count($todoList);
 ?>
 
-    <h1>Список дел пользователя <?php echo $_POST['user']?></h1>
-
+    <h1>Список дел пользователя <span>&laquo;<?php echo $_POST['user']?>&raquo;</span></h1>
+    <h2><?php echo $todoList[0];?></h2>
     <table class="utable sub sub2">
         <tr><th>N задачи</th><th>Задача</th><th>Статус</th></tr>
         <?php
