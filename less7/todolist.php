@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -42,7 +43,3 @@ $todoList=getTodoLists ($_POST['nlist']); $sizeTodoList=count($todoList);
 
 </div></body>
 </html>
-
-
-
-

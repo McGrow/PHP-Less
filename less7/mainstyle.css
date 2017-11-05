@@ -7,11 +7,13 @@ font-family: 'Oswald', sans-serif;
 font-family: 'Arimo', sans-serif;
 */
 
+
 /* CSS Document */
 
 html { background: url(img/bg80d.png);}
 BODY { margin:0; padding:0; font: 14px/16px 'Arimo', sans-serif; color:#333;}
 td, table {font: 14px/14px 'Arimo', sans-serif; vertical-align: top; border:0px;padding:0px; margin:0px;}
+
 
 h1, h2, h3, h4, h5, h6 {padding:0px; margin:0px; font-family: "Oswald", sans-serif;}
 p,  a, br , b {padding:0px; margin:0px; font-family:Tahoma, sans-serif;color:#333;}
@@ -19,16 +21,20 @@ p,  a, br , b {padding:0px; margin:0px; font-family:Tahoma, sans-serif;color:#33
 .b { font-weight:bold;}
 .n { font-weight:normal; font-style:normal;}
 
+
 form, input, div, img, dl, dt, dd, ul {padding:0px; margin:0px; border: 0px;}
 a { text-decoration:none; padding:0px; margin:0px;  color: #1f8100; }
 
+
 .clr, #clr   { clear:both; height:0px; line-height:0px; font-size:1px;}
 .clrr {clear:right; height:0px; line-height:0px; font-size:1px;}
+
 
 .sep1 { height:5px;}
 .sep2 { height:10px;}
 .sep3 { height:15px;clear:both;}
 .sep4 { height:100px;clear:both; border:1px solid red;}
+
 
 /* +++++++++++++++++ BODY +++++++++++++++++++++ */
 * { border-radius: 5px;}
