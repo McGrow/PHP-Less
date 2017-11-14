@@ -1,0 +1,22 @@
+#!/bin/bash
+# myfile Bash scrypt
+
+path=var/www/project
+mkdir -p $path
+cd $path
+
+echo Директория создана - $path
+
+data=$(date +"%d-%m-%y")
+touch $data.txt
+
+echo Файл $data создан
+
+chmod +x ./$data.txt
+whoami>>$data.txt
+
+echo Строка с именем пользователя добавлена
+
+gzip $data.txt
+
+echo Файл помещен в архив

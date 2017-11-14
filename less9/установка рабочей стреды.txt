@@ -1,0 +1,72 @@
+Установка рабочей среды с Vagrant
+
+Установить софт
+
+git, gitbash
+https://git-scm.com/downloads
+
+virtualbox
+https://www.virtualbox.org/wiki/Downloads
+
+vagrant
+https://www.vagrantup.com/downloads.html
+
+phpstorm
+https://confluence.jetbrains.com/display/PhpStorm/Previous+PhpStorm+Releases
+
+Xdebug helper (для chrom)
+https://chrome.google.com/webstore/detail/xdebug-helper/eadndfjplgieldjbigjakmdgkmoaaaoc?hl=ru
+
+Установить все по очереди
+
+Организуем путь. Например:
+K:\php1team\vagrant\vagrant (так было на уроке)
+или
+K:\php1team\www\vagrant
+где: 	k - буква диска
+	php1team - рабочая папка с файлами
+	www - будущая самая верхняя корневая директория сайта
+	vagrant - содержимое архива vagrant.zip (выклыдвался в Slack)
+запускаем git bash и прописываем путь к vagrant файлу:
+cd K:/php1team/www/vagrant (обратить внимание на наклон слешей)
+Запускаем установку виртуальной машины. Как оказалось, virtualbox можно вообще не запускать.
+vagrant up
+Пока устанавливается и конфигурируется виртуальная машина (сервер) открываем блокнот с правами администратора.
+
+Открываем в нем файл с правами администратора:
+C:\Windows\System32\drivers\etc hosts
+в низу прописываем
+192.168.50.33	php.local
+
+Затем ложим в папку K:/php1team/www  файл
+index.php который содержит <?php phpinfo(); ?>
+
+если в git bash все установилось в строке адреса броузера прописываем:
+php.local
+если таблица с php параметрами не показалась, значит что-то пошло не так )
+
+
+в git bash можно воспользоваться следующими командами:
+vagrant up			# запустить установку виртуальной машины
+				# Если виртуалка уже была создана тогда
+				# команда просто запускает машину снужной
+				# конфигурацией, прописанной в vagrant
+				# файле.
+Если запускать виртуалку из интерфейса virtualbox - она запустится НО сайты показывать не будет. Будет ошибка 403
+
+vagrant ssh      		# подключиться по SSH под юзером vagrant
+vagrant suspend 	 	# поставить на паузу
+vagrant halt    	 	# выключить
+vagrant reload  	 	# перезагрузить конфиг
+				   (без выполнения provision)
+vagrant reload 		--provision
+vagrant destroy  		# удалить виртуалку
+vagrant box list 		# cписок доступных "боксов"
+vagrant list-commands 	# полный список доступных команд
+
+Запуск уже установленнной машины:
+Запускаем git bash
+Идем по пути к vagrant файлу:
+cd K:/php1team/www/vagrant
+пишем
+vagrant up
