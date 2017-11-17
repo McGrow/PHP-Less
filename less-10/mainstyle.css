@@ -1,0 +1,302 @@
+@charset "utf-8";
+@import url('https://fonts.googleapis.com/css?family=Arimo:400,400i,700,700i|Oswald:400,500,600,700|Russo+One');
+
+/*
+font-family: 'Russo One', sans-serif;
+font-family: 'Oswald', sans-serif;
+font-family: 'Arimo', sans-serif;
+*/
+
+/* CSS Document */
+
+html { background: url(img/bg80d.png);}
+BODY { margin:0; padding:0; font: 14px/16px 'Arimo', sans-serif; color:#333;}
+td, table {font: 14px/14px 'Arimo', sans-serif; vertical-align: top; border:0px;padding:0px; margin:0px;}
+
+h1, h2, h3, h4, h5, h6 {padding:0px; margin:0px; font-family: "Oswald", sans-serif;}
+p,  a, br , b {padding:0px; margin:0px; font-family:Tahoma, sans-serif;color:#333;}
+
+.b { font-weight:bold;}
+.n { font-weight:normal; font-style:normal;}
+
+form, input, div, img, dl, dt, dd, ul {padding:0px; margin:0px; border: 0px;}
+a { text-decoration:none; padding:0px; margin:0px;  color: #1f8100; }
+
+.clr, #clr   { clear:both; height:0px; line-height:0px; font-size:1px;}
+.clrr {clear:right; height:0px; line-height:0px; font-size:1px;}
+
+.sep1 { height:5px;}
+.sep2 { height:10px;}
+.sep3 { height:15px;clear:both;}
+.sep4 { height:100px;clear:both; border:1px solid red;}
+
+/* +++++++++++++++++ BODY +++++++++++++++++++++ */
+* { border-radius: 5px;}
+.canvas {
+    min-width:800px; max-width: 1300px;
+    background-color: rgba(255,255,255,0.2);
+    padding: 20px 40px; margin: 10px auto;
+    border-top: 2px solid #CCC;
+    border-left:  2px solid #CCC;
+    border-bottom: 2px solid #FFF;
+    border-right: 2px solid #FFF;
+}
+
+h1, h2, h3 {
+    display: block;
+    background: #F0F0F0;
+    font: bold 2rem/2rem "Oswald";
+    color: #4c4c4c;
+    padding: 20px 20px; margin: 0 0 30px 0;
+    border: 1px solid #BBB;;
+}
+
+h1 span, h2 span, h3 span, h2 b, h3 b, p b {color: #1f8100;}
+h2  {
+    font: bold 1.7rem/1.7rem "Oswald";
+    margin: 15px 0px;
+}
+h3  {
+    font: bold 1.5rem/1.7rem "Oswald";
+    margin: 10px 0px;
+}
+p {
+    background-color: white;
+    font: 1.2rem/1.7rem Tahoma ;
+    padding: 20px; margin: 10px 0 30px 70px;
+}
+
+/*Obvodka*/
+.sub {border: 7px solid rgba(125,125,125,.2);}
+.sub-red {border: 7px solid rgba(100,0,0,.2);}
+.sub-green {border: 7px solid rgba(0,150,0,.2);}
+.sub-blue {border: 7px solid rgba(50,150,255,.2);}
+.sub2 {border-width: 12px;}
+.sub3 {border-width: 16px;}
+
+
+/* == Message ============================================== */
+.msg {
+    background: #F5F5F5;/* border: 2px solid #FFF;*/ margin: 10px 0;
+}
+.msg:hover {background: #FFF;}
+.m-red p a { color: #a31500;} .m-red p:before{background-color: #a31500;}
+.m-green p a { color: #1f8100;} .m-green p:before{background-color: #1f8100;}
+.m-blue p a { color: #6396FF;} .m-blue p:before{background-color: #6396FF;}
+.m p a { color: #555;} .m p:before{background-color: #555;}
+
+.msg p:before {
+    content: "!"; color: #FFF;
+    display: inline-block;  vertical-align: middle;
+    font: 48px 'Russo One', sans-serif;
+    padding: 4px 25px; margin: 0 20px 0 0;
+    text-shadow: 2px 2px 2px #000;
+    border-top-left-radius: 5px ; border-bottom-left-radius: 5px ;
+}
+.msg p {
+    font: 24px 'Arimo', sans-serif;
+    display: inline-block;  vertical-align: middle;
+    padding: 0; margin: 0;
+    background-color: transparent;
+}
+.msg p a { font-weight: bold;}
+.msg p a:hover {text-decoration: underline;}
+
+/* == USER CARD ============================================== */
+.usercard {
+    background-color: rgba(255, 255, 255, 0.5);
+    padding: 10px;
+}
+.usercard div {
+    display: inline-block; vertical-align: middle;
+}
+.usercard img {
+    display: inline-block; vertical-align: middle;
+    width: 150px; height: 150px;
+    border-radius: 150px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.2);
+    padding: 3px; margin: -30px 30px -30px 0;
+    background-color: #FFF;
+}
+.usercard div h1 {
+    padding: 0px 0px 10px; margin: -10px 0 0 0;
+    border: 0; Color: #1f8100; background-color: transparent;
+}
+.usercard div p {
+    font-size: 1.4em;
+}
+
+/* == Form ============================================== */
+.frm {
+    width: 500px; display: block; box-sizing: border-box;
+    margin: 20px auto; padding:40px;
+    background: #F5F5F5;
+    font-size: 1rem;
+}
+.frm .lastbut {text-align: right;}
+.frm label {
+    display: block;
+    font: 1.3em/1.4em  Tahoma;
+    color: #777;
+}
+.frm h4 {
+    font: 500 1.6em 'Oswald', sans-serif; text-transform: uppercase;
+    padding: 0 0 20px 0px;
+}
+.frm .block {
+    border: 1px solid #DDD;
+    padding: 10px;
+    width: 100%; box-sizing: border-box;
+    margin: 0 0 10px 0;
+}
+.frm .block input {
+    display: block;/* box-sizing: border-box;*/
+    width: 100%;
+    padding: 5px 10px; margin: 5px 0;
+    font: 1.5em/1.6em sans-serif;
+    outline: none;
+    border: 1px solid #CCC;
+    background-color:#FAFAFA;
+    color: #AAA;
+}
+.frm .block input::placeholder {
+    color:#CCC;
+    text-align: right;
+}
+.frm .block input:focus {
+    border: 1px solid #AAA; outline: none;
+    background-color:#FFF;
+    color: #555;
+}
+.frm button {
+    outline: none; border: 1px solid #FFF;
+    background:linear-gradient(to top, #777 0%, #999 100%);
+    background-color: #999;
+    font: 300 1.4em/1.3em "Oswald"; color: #F0F0F0;
+    box-shadow: 2px 2px 2px rgba(100,100,100,0.5);
+    margin-top: 20px; padding: 0 9px 2px 9px;
+}
+.frm button:hover {
+    background-image: none;
+    transition: 500ms;
+    background-color: #555;
+    color: #FFF;
+    cursor: pointer;
+}
+.frm button:active {
+    box-shadow: none;
+}
+
+.frm .checkblock {
+    padding: 5px; margin-bottom: 6px;
+    border-bottom:1px solid #999;
+    position: relative;
+    background-color: #FFF;
+    border-radius: 0;
+}
+.frm .checkblock input{
+    width: auto;
+    float: right; margin: 0.5em 0.5em 0 0;
+    transform:scale(1.8);
+    opacity:0.9;
+    cursor:pointer;
+}
+.frm .checkblock label{
+    float: left;
+    font: 1.3em/1.2em 'Arimo';
+    display: block; width:90%;
+}
+
+/* == Table ============================================== */
+
+.utable {
+    width: 90%;
+    margin: 20px auto;
+    color: #777;
+    text-align: left;
+    background-color: #EEE;
+
+}
+
+.utable th {
+    font: 500 1.3em 'Oswald', Sans-Serif ;
+    background:linear-gradient(to top, #777 0%, #999 100%);
+    color: #FFF;
+    padding: 5px 12px;
+    border-radius: 0;
+}
+.utable th:first-child {
+    text-align: center;
+}
+.utable td {
+    font-size: 1.3em;
+    padding: 12px 12px;
+    background-color: #FFF;
+}
+.utable td:first-child{
+    background-color: #DDD;
+    font-weight: bold;
+    width: 10%;
+    text-align: center;
+}
+.utable tr:hover {
+    background-color: #EEE;
+}
+.utable tr:hover td {
+    transition: 500ms;
+    background-color: transparent;
+}
+
+/* == POST ============================================== */
+.post {
+    min-width: 500px;
+    position: relative;
+    margin: 5px 100px; padding:7px;
+    background-color: #F5F5F5;
+}
+.post:hover {
+    background-color: #FFF;
+ }
+.post img {
+    display: block; float: left;
+    height: 50px;
+    padding: 4px 10px 4px 4px;
+    border-right: 1px solid #CCC;
+}
+.post div {
+    margin: 0 0 0 74px;
+}
+
+.post div strong {
+    font: bold 15px/16px "Russo One", Sans-serif; color: #555;
+    padding: 0 10px 0px 0;
+    border-right: 1px solid #444; border-radius: 0;
+    margin-bottom: 5px;
+}
+.post div span {
+    font-size: 12px;
+    padding-left: 10px; margin-left: 10px;
+
+}
+.post div p {
+    font: 1rem Sans-serif;
+    color:#555;
+    padding: 5px 10px 5px 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
