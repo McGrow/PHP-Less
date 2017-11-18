@@ -38,7 +38,7 @@ $todoSize=count($userTodoList); $i=0;
     <form class="frm sub sub3" action="todolist.php" method="post">
         <h4>Форма завершенных задач</h4>
 
-        <?php      while(++$i<=$todoSize-1){ ?>
+        <?php  while(++$i<=$todoSize-1){ ?>
 
             <div class="checkblock">
                 <label><?php echo $userTodoList[$i];?></label>
@@ -46,7 +46,7 @@ $todoSize=count($userTodoList); $i=0;
                 <div class="clr"></div>
             </div>
             <input type="hidden" name="user" value="<?php echo $user->getLogin();?>">
-
+        <?php  }  ?>
         <div class="lastbut"><button type="submit" class="butsub">ОТПРАВИТЬ</button></div>
     </form>
 
