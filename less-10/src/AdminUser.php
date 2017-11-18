@@ -2,37 +2,37 @@
 
 class AdminUser extends AbstractUser
 {
-    public function __construct($name, $data = 'У Администратора пока нет данных')
+    public function __construct($name, $data = 'У Администратора пока нет данных') //Создаем Администратора
     {
         parent::__construct($name, $data);
         parent::editRole(parent::ADMIN);
     }
 
 
-    public function getData($user = NULL)
+    public function getData($user = NULL)// Просмотр данных всех пользователей
     {
         if ($user) {
-            $this->verifyObject($user);
+            parent::verifyObject($user);// проверка входящих данных на подходящий тип и класс
             return 'Пользователь ' . $user->getName() . ':&nbsp&nbsp' . $user->data;
         } else {
             return 'Пользователь ' . $this->getName() . ':&nbsp&nbsp' . $this->data;
         }
     }
 
-    public function setName($name, $user=NULL)
+    public function setName($name, $user=NULL)//Изменение Имени любого пользователя
     {
         if($user){
-            $this->verifyObject($user);
+            parent::verifyObject($user);// проверка входящих данных на подходящий тип и класс
             $user->name=$name;
         } else {
             $this->name=$name;
         }
     }
 
-    public function setRole($role, $user=NULL)
+    public function setRole($role, $user=NULL) //Изменение Роли любого пользователя
     {  $str=''; eval('$str=parent::'.$role.';');
         if ($user) {
-            $this->verifyObject($user);
+            parent::verifyObject($user);// проверка входящих данных на подходящий тип и класс
             $user->role = $str;
             $user->premissions = self::premissions($str);
         } else {
@@ -41,20 +41,14 @@ class AdminUser extends AbstractUser
         }
     }
 
-    public function setData($data, $user=NULL)
+    public function setData($data, $user=NULL) // Изменение Данных любого пользователя
     {   if($user){
-            $this->verifyObject($user);
+            parent::verifyObject($user); // проверка входящих данных на подходящий тип и класс
             $user->data=$data;
         } else {
             $this->data=$data;
         }
     }
 
-    private function verifyObject ($obj) { // Проверка поступающей переменной (object) на пригодность к обработке
-        $className = get_class ($obj);
-        if(gettype ($obj)!='object'){mes(' Ошибка данных - переменная не есть Объект'); die();}
-        if( $className == 'ManagerUser' ||
-            $className == 'User' ){return;
-        }else{mes(' Ошибка данных - передан не правильный Объект '. $className); die();}
-    }
+
 }

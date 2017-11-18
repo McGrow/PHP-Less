@@ -8,10 +8,10 @@ class ManagerUser extends AbstractUser
         parent::editRole(parent::MANAGER);
     }
 
-    public function getData($user = NULL) // Просмотр своих данных или данных Пользователя
+    public function getData($user = NULL) // Просмотр своих данных или данных Простого пользователя
     {
         if ($user) {
-            if ($user->getRole() == parent::USER) {
+            if (parent::verifyObject($user) == 'User') {
                 return 'Пользователь ' . $user->getName() . ':&nbsp&nbsp' . $user->data;
             } else {
                 mes('У вас нет прав просматривать данные этого пользователя');
